@@ -51,14 +51,60 @@ public class MainAgencia {
 
                 // Condicional para ver si el usuario quiere un modelo en especifico
                 if (modelo.equals("si")) {
-                    System.out.println("¿Qué modelo desea comprar?");// Preguntar al usuario qué modelo quiere
-                                                                     // comprar
+                    System.out.println("Se le asignará un vendedor que le muestre lo que usted desea\n\n");
+                    Vendedor vendedor = new Vendedor(); // creamos a un vendedor
+                    System.out.println(vendedor.presentarse() + vendedor.preguntarModelo());// vendedor se presenta y
+                                                                                            // pregunta al usuario qué
+                                                                                            // modelo quiere
+                                                                                            // comprar
                     String modeloUsuario = scan.nextLine();// leer la respuesta del usuario
                     auto.setModelo(modeloUsuario);// asignar el modelo deseado al auto
+                    System.out.println(vendedor.preguntarColor());// El vendedor pregunta el color de auto que quiere el
+                                                                  // usuario
+                    String color = scan.nextLine();// leemos la respuesta del usuario
+                    color = color.toLowerCase().trim();
+
+                    // Condicional que hace que el vendedor niegue un auto de color rojo
+                    if (color.equals("rojo")) {
+                        System.out.println(vendedor.negarColor());// el vendedor niega el color rojo
+                        String respuesta = scan.nextLine();// leer la respuesta del cliente
+                        respuesta.toLowerCase().trim();
+
+                        // Si el usuario responde que no quiere ningún otro color
+                        if (respuesta.equals("ninguno")) {
+                            System.out.println(vendedor.pedirRegreso());// el vendedor solicita al cliente que regrese
+                                                                        // más tarde
+
+                            // Si el usuario quiere otro color
+                        } else {
+                            auto.setColor(respuesta);// asignar el color al auto
+                        }
+
+                        // Si el color elegido no es rojo
+                    } else {
+                        auto.setColor(color);// asignar el color al auto
+                    }
 
                     // Si el usuario no quiere un modelo en específico
                 } else {
-                    System.out.println("Se le asignará un vendedor que le muestre los modelos disponibles");
+                    System.out.println("Se le asignará un vendedor que le muestre los modelos disponibles\n\n");
+                    Vendedor vendedor = new Vendedor(); // creamos a un vendedor
+                    System.out.println(vendedor.presentarse() + "\n" + vendedor.ofrecerTipoAuto()); // el vendedor se
+                                                                                                    // presenta y
+                                                                                                    // pregunta el tipo
+                                                                                                    // de auto deaseado
+                    String tipoAuto = scan.nextLine();// Leer la respuesta del usuario
+                    auto.setTipoAuto(tipoAuto);// asignamos el tipo de auto
+                    tipoAuto = tipoAuto.toLowerCase().trim(); // quitamos espacios y ponemos en minúsculas
+
+                    // Condicional para asignar el costo despendiendo del tipo de auto
+                    if (tipoAuto.equals("delujo")) {
+                        double costo = auto.getCosto() * 3;
+                        auto.setCosto(costo);
+                    } else if (tipoAuto.equals("deportivo")) {
+                        double costo = auto.getCosto() * 2;
+                        auto.setCosto(costo);
+                    }
 
                 }
 
@@ -66,6 +112,8 @@ public class MainAgencia {
             } else {
                 agencia.setAutosNuevos(false);// Hacemos que la agencia sea de autos seminuevos
                 auto.setNuevo(false);// Hacemos que el auto sea seminuevo
+                double precio = auto.getCosto() - 50000;
+                auto.setCosto(precio);
 
             }
 
