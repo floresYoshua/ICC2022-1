@@ -2,6 +2,7 @@
  * Clase Agencia clase que simula una agencia de autos
  * 
  * @author Melissa Fernández
+ * @author Jose Pablo Granados
  * @version 1.0
  */
 public class Agencia {

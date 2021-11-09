@@ -2,11 +2,12 @@
  * Clase Vendedor Clase que simula a un vendedor de autos
  * 
  * @author Melissa Fernández
+ * @author Jose Pablo Granados
  * @version 1.0
  */
 public class Vendedor {
 
-    private boolean buenHumor; // Si el vendedor tiene buen humor o no
+    private boolean buenHumor; // Si el vendedor está de buen humor o no
     private boolean trabajador; // Si el vendedor es trabajador o no
     private int noVendedor;// El número de vendedor
     private String nombre; // El nombre del vendedor
