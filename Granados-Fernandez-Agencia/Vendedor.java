@@ -104,4 +104,50 @@ public class Vendedor {
     public String todoBien() {
         return "¿El servicio le ha parecido bien hasta el momento?(si/no)";
     }
+
+    /**
+     * Metodo descuento que avisa al cliente que habrá un descuento
+     * 
+     * @return El aviso de descuento
+     */
+    public String descuento() {
+        return "Muchas gracias por su amabilidad. Se le hará un descuento de $20,000 en su auto";
+    }
+
+    /**
+     * Método mostrarAuto El vendedor muestra el auto pedido por el cliente
+     * 
+     * @return Las caracteristicas del auto
+     */
+    public String mostrarAuto() {
+        return "\nAhora se mostrarán las especificaciones de su auto: ";
+    }
+
+    /**
+     * Método acuerdo pregunta al cliente si está de acuerdo con su compra
+     * 
+     * @return La pregunta
+     */
+    public String acuerdo() {
+        return "¿Está de acuerdo con su compra?(si/no)";
+    }
+
+    /**
+     * Método deNuevo hace que el vendedor solicite al usuario repetir el proceso de
+     * compra
+     * 
+     * @return La solicitud de realizar el proceso otra vez
+     */
+    public String deNuevo() {
+        return "Tal vez algo salió mal. Por favor vuelva a hacer el proceso de compra.";
+    }
+
+    /**
+     * Método contrato
+     * 
+     * @return
+     */
+    public String contrato() {
+        return "Muy bien, su compra procederá. Ahora debe firmar el contrato y los documentos que se le harán llegar en un momento.\nLa entrega se hará cuando haya completado esos pasos.";
+    }
 }

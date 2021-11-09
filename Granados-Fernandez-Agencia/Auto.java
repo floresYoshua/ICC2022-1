@@ -17,13 +17,27 @@ public class Auto {
      * Metodo constructor sin parametros
      */
     public Auto() {
-        marca = "Sin marca";
-        modelo = "Sin mmodelo";
-        tipoAuto = "Sin tipo";
-        color = "Blanco";
+        marca = "";
+        modelo = "";
+        tipoAuto = "";
+        color = "";
         nuevo = true;
         costo = 300000;
 
+    }
+
+    /**
+     * Metodo constructor que recibe la marca
+     * 
+     * @param marca La marca de la agencia
+     */
+    public Auto(String marca) {
+        this.marca = marca;
+        modelo = "";
+        tipoAuto = "";
+        color = "";
+        nuevo = true;
+        costo = 300000;
     }
 
     /**
@@ -141,8 +155,8 @@ public class Auto {
      * @return La representación del auto en forma de cadena
      */
     public String toString() {
-        return "El auto es " + tipoAuto + " de la marca " + marca + " modelo " + modelo + " color " + color
-                + " y su precio es de " + costo;
+        return "\nEl auto es " + tipoAuto + " de la marca " + marca + " modelo " + modelo + " color " + color
+                + " y su precio es de $" + costo;
     }
 
 }
