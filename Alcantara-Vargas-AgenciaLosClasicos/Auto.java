@@ -21,15 +21,35 @@ public class Auto{
     //Métodos
     //Métodos Constructores
     /**
+     * Constructor que permite crear un automóvil especificando cada una
+     * de sus características
+     *
+     * @param marca La marca del auto
+     * @param modelo El modelo (nombre)
+     * @param ano El año de fabricación
+     * @param precio El precio del auto
+     * @param color El color del auto
+     **/
+    public Auto(String marca, String modelo, int ano, double precio, String color){
+	this.marca = marca;
+	this.modelo = modelo;
+	this.ano = ano;
+	this.precio = precio;
+	this.color = color; 
+    }
+    
+    /**
      * Constructor sin parametros, crea un automóvil de la marca Toyota, 
-     * modelo Prius, del año 2021 y color rojo
+     * modelo Prius, del año 2021 y color rojo, con un valor de 
+     * 380000 pesos
      * 
      * */
     public Auto(){
-	this.marca = Toyota;
-	this.modelo = Prius;
+	this.marca = "Toyota";
+	this.modelo = "Prius";
 	this.ano = 2021;
-	this.color = Rojo;
+	this.precio = 380000;
+	this.color = "Rojo";
     }
     
     //Métodos Observadores
@@ -77,5 +97,84 @@ public class Auto{
     public String getColor(){
 	return this.color;
     }
-    
+
+    //Métodos modificadores
+    /**
+     * Método que permite cambiar la marca de un auto
+     *
+     * @param ma La nueva marca
+     **/
+    public void setMarca(String ma){
+	this.marca = ma;
+    }
+
+    /**
+     * Método que permite modificar el modelo de un auto
+     *
+     * @param mo El nuevo modelo
+     **/
+    public void setModelo(String mo){
+	this.modelo = mo;
+    }
+
+    /**
+     * Método que permite cambiar el año de fabricación de 
+     * un auto
+     *
+     * @param a El nuevo año de fabricación
+     **/
+    public void setAno(int a){
+	this.ano = a;
+    }
+
+    /**
+     * Método que permite cambiar el precio del auto
+     *
+     * @param p El nuevo precio
+     **/
+    public void setPrecio(double p){
+	this.precio = p;
+    }
+
+    /**
+     * Método que permite cambiar el color de un auto
+     *
+     * @param c El nuevo color
+     **/
+    public void setColor(String c){
+	this.color = c;
+    }
+
+    //Métodos calculadores
+    /**
+     * Método que permite saber si un auto es 
+     * considerado como clásico
+     * 
+     * @return Un valor boolean dependiendo de la respuesta
+     **/
+    public boolean clasico(){
+	//Un auto se considera clásico en la CDMX si tiene 30 años o más
+	boolean clasico;
+	int a = this.getAno();
+	//Calcula la antiguedad
+	int antiguedad = 2021 - a;
+	//Si es mayor a 30 es clásico
+	if (antiguedad >= 30 ){
+	    clasico = true;
+	    return clasico;
+	}else{//Si no es mayor a 30 no es clásico
+	    clasico = false;
+	    return clasico;
+	}
+    }
+
+    //Métodos especiales
+    /**
+     * Método toString
+     *
+     * @return Las características básicas del automóvil
+     **/
+    public String toString(){
+	return "Automóvil: " + this.marca + " " + this.modelo + "\n" + "Año " + this.ano + "\n" + "Color: " + this.color + "\n" + "Con un precio actual de: " + this.precio + " pesos."; 
+    }
 }
