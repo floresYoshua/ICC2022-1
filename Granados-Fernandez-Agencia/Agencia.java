@@ -6,71 +6,18 @@
  */
 public class Agencia {
 
-    private String nombre; // El nombre de la agencia
-    private boolean autosNuevos;// Si la agencia vende autos nuevos o seminuevos
-    private Vendedor vendedor;
+    public static void main(String[] args) {
 
-    /**
-     * Metodo constructor sin parámetros
-     */
-    public Agencia() {
-        nombre = "Sin nombre";
-        autosNuevos = true;
-        vendedor = new Vendedor();
-    }
+        String nombre; // El nombre de la agencia
+        boolean autosNuevos;// Si la agencia vende autos nuevos o seminuevos
+        Vendedor vendedor1 = new Vendedor();
+        Vendedor vendedor2 = new Vendedor("Josue");
+        Vendedor vendedor3 = new Vendedor("Mario");
+        Auto auto1 = new Auto("El koala", "KSJ", "mediano", "blanco");
+        Auto auto2 = new Auto("El koala", "JHS", "deportivo", "negro");
+        Auto auto3 = new Auto("El koala", "JJK", "de lujo", "lila");
+        Auto auto4 = new Auto("El koala", "KNJ", "mediano", "azul");
+        Auto auto5 = new Auto("El koala", "KTH", "mediano", "rojo");
 
-    /**
-     * Metodo getNombre regresa el nombre de la agencia
-     * 
-     * @return el nombre de la agencia
-     */
-    public String getNombre() {
-        return nombre;
-    }
-
-    /**
-     * Metodo getAutosNuevos permite saber si la agencia vende autos nuevos o no
-     * 
-     * @return si la agencia vende autos nuevos (true) o seminuevos (false)
-     */
-    public boolean getAutosNuevos() {
-        return autosNuevos;
-    }
-
-    /**
-     * Metodo getVendedor Obtener al vendedor
-     * 
-     * @return El vendedor
-     */
-    public Vendedor getVendedor() {
-        return vendedor;
-    }
-
-    /**
-     * Metodo setNombre asigna el nombre de la agencia
-     * 
-     * @param nombre El nombre de la agencia
-     */
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    /**
-     * Metodo setAiutosNuevos asigna true si la agencia es de autos nuevos y false
-     * si es de seminuevos
-     * 
-     * @param autosNuevos Si es de autos nuevos o seminuevos
-     */
-    public void setAutosNuevos(boolean autosNuevos) {
-        this.autosNuevos = autosNuevos;
-    }
-
-    /**
-     * Metodo asignarVendedor asigna un vendedor al cliente
-     * 
-     * @return la presentación del vendedor
-     */
-    public String asignarVendedor() {
-        return vendedor.presentarse() + "\n" + vendedor.ofrecerTipoAuto();
     }
 }

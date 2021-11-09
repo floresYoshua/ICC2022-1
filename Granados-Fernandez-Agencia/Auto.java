@@ -41,6 +41,22 @@ public class Auto {
     }
 
     /**
+     * Metodo constructor que recibe marca, modelo, tipo y color de auto
+     * 
+     * @param marca  La marca del auto
+     * @param modelo El modelo del auto
+     * @param tipo   El tipo de auto (de lujo, deportivo, mediano)
+     * @param color  El color del auto
+     */
+    public Auto(String marca, String modelo, String tipo, String color) {
+        this.marca = marca;
+        this.modelo = modelo;
+        tipoAuto = tipo;
+        nuevo = true;
+        costo = 300000;
+    }
+
+    /**
      * Metodo getMarca Metodo que devuelve la marca del auto
      * 
      * @return La marca del auto
