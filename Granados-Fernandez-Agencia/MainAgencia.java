@@ -85,6 +85,22 @@ public class MainAgencia {
                         auto.setColor(color);// asignar el color al auto
                     }
 
+                    System.out.println(vendedor.todoBien());// El vendedor pregunta si todo va bien hasta el momento
+                    String respuesta = scan.nextLine();// leer la respuesta delcliente
+                    respuesta = respuesta.toLowerCase().trim();
+
+                    // Condicional que hace que el vendedor esté de buen humor o no
+                    if (respuesta.equals("no")) {
+                        vendedor.setBuenHumor(false);// poner al vendedor de mal humor
+                    }
+
+                    // Condicional que hace que el vendedor de un descuento si está de buen humor
+                    boolean humor = vendedor.getBuenHumor();
+                    if (humor) {
+                        double precio = auto.getCosto() - 20000;
+                        auto.setCosto(precio);
+                    }
+
                     // Si el usuario no quiere un modelo en específico
                 } else {
                     System.out.println("Se le asignará un vendedor que le muestre los modelos disponibles\n\n");

@@ -94,4 +94,14 @@ public class Vendedor {
     public String pedirRegreso() {
         return "Ese color lo tendremos dentro de 2 semanas. Por favor regrese más tarde.";
     }
+
+    /**
+     * Método todoBien hace que el vendedor pregunte si el servicio va bien hasta el
+     * momento
+     * 
+     * @return La pregunta al usuario
+     */
+    public String todoBien() {
+        return "¿El servicio le ha parecido bien hasta el momento?(si/no)";
+    }
 }
