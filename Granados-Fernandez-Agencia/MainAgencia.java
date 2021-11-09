@@ -61,7 +61,7 @@ public class MainAgencia {
             // Condicional para ver si el usuario quiere un modelo en especifico
             if (modelo.equals("si")) {
                 System.out.println("Se le asignará un vendedor que le muestre lo que usted desea\n\n");
-                Vendedor vendedor = new Vendedor(); // creamos a un vendedor
+                Vendedor vendedor = agencia.getVendedor(); // creamos a un vendedor
                 System.out.println(agencia.asignarVendedor());// vendedor se presenta
                 String tipoAuto = scan.nextLine();// Leer la respuesta del usuario
                 auto.setTipoAuto(tipoAuto);// asignamos el tipo de auto

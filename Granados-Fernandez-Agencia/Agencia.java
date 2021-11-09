@@ -38,6 +38,15 @@ public class Agencia {
     }
 
     /**
+     * Metodo getVendedor Obtener al vendedor
+     * 
+     * @return El vendedor
+     */
+    public Vendedor getVendedor() {
+        return vendedor;
+    }
+
+    /**
      * Metodo setNombre asigna el nombre de la agencia
      * 
      * @param nombre El nombre de la agencia
