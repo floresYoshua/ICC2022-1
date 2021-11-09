@@ -62,8 +62,7 @@ public class MainAgencia {
             if (modelo.equals("si")) {
                 System.out.println("Se le asignará un vendedor que le muestre lo que usted desea\n\n");
                 Vendedor vendedor = new Vendedor(); // creamos a un vendedor
-                System.out.println(vendedor.presentarse());// vendedor se presenta
-                System.out.println(vendedor.ofrecerTipoAuto());// vendedor pregunta el tipo de auto deseado
+                System.out.println(agencia.asignarVendedor());// vendedor se presenta
                 String tipoAuto = scan.nextLine();// Leer la respuesta del usuario
                 auto.setTipoAuto(tipoAuto);// asignamos el tipo de auto
                 tipoAuto = tipoAuto.toLowerCase().trim(); // quitamos espacios y ponemos en minúsculas

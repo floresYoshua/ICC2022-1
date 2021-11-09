@@ -148,6 +148,6 @@ public class Vendedor {
      * @return
      */
     public String contrato() {
-        return "Muy bien, su compra procederá. Ahora debe firmar el contrato y los documentos que se le harán llegar en un momento.\nLa entrega se hará cuando haya completado esos pasos.";
+        return "Muy bien, su compra procederá. Ahora debe firmar el contrato y los documentos que se le harán llegar en un momento.\nLa entrega se hará cuando haya completado los pasos anteriores.";
     }
 }

@@ -8,6 +8,7 @@ public class Agencia {
 
     private String nombre; // El nombre de la agencia
     private boolean autosNuevos;// Si la agencia vende autos nuevos o seminuevos
+    private Vendedor vendedor;
 
     /**
      * Metodo constructor sin parámetros
@@ -15,6 +16,7 @@ public class Agencia {
     public Agencia() {
         nombre = "Sin nombre";
         autosNuevos = true;
+        vendedor = new Vendedor();
     }
 
     /**
@@ -52,5 +54,14 @@ public class Agencia {
      */
     public void setAutosNuevos(boolean autosNuevos) {
         this.autosNuevos = autosNuevos;
+    }
+
+    /**
+     * Metodo asignarVendedor asigna un vendedor al cliente
+     * 
+     * @return la presentación del vendedor
+     */
+    public String asignarVendedor() {
+        return vendedor.presentarse() + "\n" + vendedor.ofrecerTipoAuto();
     }
 }
