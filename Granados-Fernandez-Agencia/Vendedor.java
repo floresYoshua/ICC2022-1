@@ -8,6 +8,7 @@ public class Vendedor {
 
     private boolean buenHumor; // Si el vendedor tiene buen humor o no
     private boolean trabajador; // Si el vendedor es trabajador o no
+    private String nombre; // El nombre del vendedor
 
     /**
      * Método constructor sin parámetros
@@ -15,6 +16,19 @@ public class Vendedor {
     public Vendedor() {
         buenHumor = true;
         trabajador = true;
+        nombre = "Humberto";
+
+    }
+
+    /**
+     * Metodo constructor que recibe el nombre del vendedor
+     * 
+     * @param nombre El nombre del vendedor
+     */
+    public Vendedor(String nombre) {
+        buenHumor = true;
+        trabajador = true;
+        this.nombre = nombre;
 
     }
 
