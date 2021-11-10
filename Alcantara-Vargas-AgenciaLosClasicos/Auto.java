@@ -1,3 +1,4 @@
+//ENCABEZADO
 /**
  * Clase que representa a un automóvil
  * @author Isaac Alcantara y Eduardo Vargas
@@ -5,6 +6,7 @@
  * */
 
 public class Auto{
+    //CUERPO
     //Atributos
 
     //Marca del auto
@@ -43,13 +45,18 @@ public class Auto{
      * modelo Prius, del año 2021 y color rojo, con un valor de 
      * 380000 pesos
      * 
-     * */
+     **/
     public Auto(){
-	this.marca = "Toyota";
-	this.modelo = "Prius";
-	this.ano = 2021;
-	this.precio = 380000;
-	this.color = "Rojo";
+	this("Toyota", "Prius", 2021, 380000, "Rojo");
+    }
+
+    /**
+     * Constructor copia. Crea un automovil identico a otro
+     *
+     * @param a Un objeto de la clase auto
+     **/
+    public Auto(Auto a){
+	this(a.getMarca(), a.getModelo(), a.getAno(), a.getPrecio(), a.getColor());
     }
     
     //Métodos Observadores
@@ -155,7 +162,7 @@ public class Auto{
     public boolean clasico(){
 	//Un auto se considera clásico en la CDMX si tiene 30 años o más
 	boolean clasico;
-	int a = this.getAno();
+	int a = this.getAno(); //Variable para guardar el año del auto
 	//Calcula la antiguedad
 	int antiguedad = 2021 - a;
 	//Si es mayor a 30 es clásico
@@ -177,4 +184,5 @@ public class Auto{
     public String toString(){
 	return "Automóvil: " + this.marca + " " + this.modelo + "\n" + "Año " + this.ano + "\n" + "Color: " + this.color + "\n" + "Con un precio actual de: " + this.precio + " pesos."; 
     }
+
 }
