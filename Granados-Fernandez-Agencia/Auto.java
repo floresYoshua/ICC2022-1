@@ -51,6 +51,7 @@ public class Auto {
     public Auto(String marca, String modelo, String tipo, String color) {
         this.marca = marca;
         this.modelo = modelo;
+        this.color = color;
         tipoAuto = tipo;
         nuevo = true;
         costo = 300000;
