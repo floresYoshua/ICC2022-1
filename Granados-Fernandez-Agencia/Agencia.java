@@ -26,11 +26,16 @@ public class Agencia {
         Cliente cliente2 = new Cliente("Mariana", "Casas", "Fuentes");
         Cliente cliente3 = new Cliente("Diana", "Islas", "Santiago");
 
+        vendedor1.setNoVendedor(1234);
+        vendedor2.setNoVendedor(1235);
+        vendedor3.setNoVendedor(1237);
+
         // Dar bienvenida y preguntar qué hacer
         System.out.println("Bienvenid@ a la agencia" + nombre);
         System.out.println("¿Qué quieres hacer?(imgresa el numero)");
-        System.out.println("1) Solicitar el dinero disponible en la agencia");
-        System.out.println("2) Saber qué clientes han coprado más de un coche en esta agencia");
+        System.out.println("1) Comprar auto");
+        System.out.println("2) Ver autos");
+        System.out.println("3) Salir");
         Scanner scan = new Scanner(System.in);// Hacer Scanner
         int respuesta = scan.nextInt();// Leer la respuesta del usuario
 

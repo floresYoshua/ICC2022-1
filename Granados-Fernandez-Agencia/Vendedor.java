@@ -45,12 +45,30 @@ public class Vendedor {
     }
 
     /**
+     * Metodo getNoVendedor nos deja saber el número de vendedor
+     * 
+     * @return noVendedor El numero de vendedor
+     */
+    public int getNoVendedor() {
+        return noVendedor;
+    }
+
+    /**
      * Método setBuenHumor método que permite cambiar el humor del vendedor
      * 
      * @param buenHumor
      */
     public void setBuenHumor(boolean buenHumor) {
         this.buenHumor = buenHumor;
+    }
+
+    /**
+     * Metodo setNoVendedor Asigna un numero de vendedor
+     * 
+     * @param noVendedor El numero de vendedor
+     */
+    public void setNoVendedor(int noVendedor) {
+        this.noVendedor = noVendedor;
     }
 
     /**
