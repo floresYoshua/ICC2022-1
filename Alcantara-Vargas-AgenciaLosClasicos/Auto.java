@@ -56,7 +56,7 @@ public class Auto{
      * @param a Un objeto de la clase auto
      **/
     public Auto(Auto a){
-	this(a.getMarca(), a.getModelo(), a.getAno(), a.getPrecio(), a.getColor());
+	this(a.marca, a.modelo, a.ano, a.precio, a.color);
     }
     
     //Métodos Observadores
@@ -183,6 +183,21 @@ public class Auto{
      **/
     public String toString(){
 	return "Automóvil: " + this.marca + " " + this.modelo + "\n" + "Año " + this.ano + "\n" + "Color: " + this.color + "\n" + "Con un precio actual de: " + this.precio + " pesos."; 
+    }
+
+    /**
+     * Método equals. Sirve para ver si dos autos son iguales
+     *
+     * @param a Auto contra el qie se va a comparar
+     * @return un valor boolean dependiendo la respuesta
+     **/
+    public boolean equals(Auto a){
+	String ma =this.marca; //Variable para la marca
+	String mo = this.modelo; //Variable para modelo
+	int n = this.ano; //Variable para Año
+	String c = this.color; //Variable para color
+	double p = this.precio; //Variable para precio
+	return ma.equals(a.marca) && mo.equals(a.modelo) && n == a.ano && c.equals(a.color) && p == precio;
     }
 
 }
