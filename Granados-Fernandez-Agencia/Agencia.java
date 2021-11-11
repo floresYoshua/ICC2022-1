@@ -22,17 +22,23 @@ public class Agencia {
         Auto auto3 = new Auto(nombre, "JJK", "de lujo", "lila");
         Auto auto4 = new Auto(nombre, "KNJ", "mediano", "azul");
         Auto auto5 = new Auto(nombre, "KTH", "mediano", "rojo");
+        Cliente cliente1 = new Cliente("Alejandro", "Rosas", "Diaz");
+        Cliente cliente2 = new Cliente("Mariana", "Casas", "Fuentes");
+        Cliente cliente3 = new Cliente("Diana", "Islas", "Santiago");
 
         // Dar bienvenida y preguntar qué hacer
         System.out.println("Bienvenid@ a la agencia" + nombre);
         System.out.println("¿Qué quieres hacer?(imgresa el numero)");
         System.out.println("1) Solicitar el dinero disponible en la agencia");
+        System.out.println("2) Saber qué clientes han coprado más de un coche en esta agencia");
         Scanner scan = new Scanner(System.in);// Hacer Scanner
         int respuesta = scan.nextInt();// Leer la respuesta del usuario
 
         switch (respuesta) {
-
+        case 1:
+            double suma = 1;
         }
 
     }
+
 }
