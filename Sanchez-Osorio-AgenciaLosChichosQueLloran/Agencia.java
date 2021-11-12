@@ -25,7 +25,8 @@ public class Agencia{
 		    
 		    //booleano que mientras sea verdadero se va a manetener en el menu de compra
 		    boolean repite = true;
-		    
+
+		    //Menu de la agencia 
 		    System.out.println("**Bienvenido a la compra de autos**");
 		    System.out.println("¿Que auto quiere comprar?");
 		    System.out.println("1. Chevrolet Aveo 2022 $229,200 (color a elegir)");
@@ -37,79 +38,119 @@ public class Agencia{
 		    System.out.println("------------------------------------------------------");
 	 
 		    switch(opcion){
+			//Si opcion es 1 entra al case 1
 		    case 1:
+			//codigo ANSI para limpiar la pantalla
 			System.out.print("\033[H\033[2J");
+
+			//Pregunta al usuario que color quiere en el auto 
 			System.out.println("¿Que color desea?");
 			System.out.println("1. Rojo");
 			System.out.println("2. Blanco");
+
+			//El usuario ingresa una opcion
 			System.out.print("Elija una opcion: ");
 			opcion = sc.nextInt();
 			System.out.println("---------------------------------------------");
+
+			//Si el usuario ingresa 1 entra al if
 			if(opcion == 1){
+			    //Se crea un ejemplar de la clase con el constructor que recibe solo el color del auto
 			    Auto autoAveo = new Auto("Rojo");
 			    System.out.println("Usted ha realizado la compra de:\n" + autoAveo);
+
+			    //Si la opcion ingresada es 2 entra al else if
 			}else if(opcion == 2){
+
+			    //Se crea un ejemplar de la clase con el constructor que recibe solo el color del auto
 			    Auto autoAveo = new Auto("Blanco");
 			    System.out.println("Usted ha realizado la compra de:\n" + autoAveo);
+
+			    //Si el usuario ingresa otro valor, muestra el siguiente mensaje
 			}else{
 			    System.out.println("Ingresa una opcion valida");
 			}
 			System.out.println("---------------------------------------------");
 
+			//El mensaje aparece y los datos en pantala se quedan inmoviles hasta que el usuario teclee enter
 			System.out.print("Presione enter para continuar...");
 			p.nextLine();
 			break;
 		
 		
 		case 2:
+
+		    //Codifo ANSI que simula limpiar la pantalla 
 		    System.out.print("\033[H\033[2J");
+
+		    //Se crea un ejemplar de la clase con el constructor sin parametros
 		    Auto autoGroove = new Auto();
 		    System.out.println("Usted ha realizado la compra de: \n" + autoGroove);
 		    System.out.println("---------------------------------------------");
 
-		    
+		    //El mensaje aparece y los datos en pantalla se quedan inmoviles hasta que el usuario teclee enter
 		    System.out.print("Presione enter para continuar...");
 		    p.nextLine();
 		    break;
 		
 		case 3:
+		    
+		    //Codigo ANSI que simula limpiar la pantalla
 		    System.out.print("\033[H\033[2J");
+
+		    //El usuario elige una opcion
 		    System.out.println("Elija su clasificacion:");
 		    System.out.println("1. Electrico $930,900");
 		    System.out.println("2. No electrico $620,000");
 		    System.out.print("Elija una opcion: ");
 		    opcion = sc.nextInt();
 		    System.out.println("---------------------------------------------");
+
+		    //Si la opcion ingresada es 1 entra al if
 		    if(opcion == 1){
+
+			//Se crea un ejemplar de la clase con el constructor que recibe si es electrico y el precio del auto 
 			Auto autoBolt = new Auto(true, "930,900");
 			System.out.println("Usted ha realizado la compra de:\n" + autoBolt);
+
+			//Si la opcion ingresada es 2 entra al else if 
 		    }else if(opcion == 2){
+
+			//Se crea un ejemplar de la clase con el constructor que recibe si es electrico y el precio del auto
 			Auto autoBolt = new Auto(false, "620,000");
 			System.out.println("Usted ha realizado la compra de:\n" + autoBolt);
+
+			//Si la opcion ingresada no es 1 o 2 entra al else y muestra un mensaje al usuario
 		    }else{
 			System.out.println("Ingresa una opcion valida");
 		    }
 		    System.out.println("---------------------------------------------");
 
-		    
+		    //El mensaje aparece y los datos en pantalla se quedan inmoviles hasta que el usuario teclee enter
 		    System.out.print("Presione enter para continuar...");
 		    p.nextLine();
 		    break;
 		
 		case 4:
+		    //Codigo ANSI que simula la limpieza de pantalla
 		    System.out.print("\033[H\033[2J");
+		    
 		    //repite = false, regresa al menu principal
 		    repite = false;
 		    break;
 		}//fin del segundo switch
 		    
-	    }while(opcion != 4);//fin del segundo do
+	    }while(opcion != 4);//fin del segundo do-while
 	    
 	    break;
 
 	    
 	case 2:
+
+	    //Codigo ANSI para simular limpieza de pantalla
 	    System.out.print("\033[H\033[2J");
+
+	    //El usuario elije una opcion
 	    System.out.println("¿Cual es su queja?");
 	    System.out.println("1. Queja sobre algun vendedor.");
 	    System.out.println("2. Queja sobre servicio.");
@@ -141,21 +182,27 @@ public class Agencia{
 
 	    */
 
-	    
+	    //El mensaje aparece y los datos en pantalla se quedan inmoviles hasta que el usuario teclee enter
 	    System.out.print("Teclee cualquier tecla para continuar...");
 	    p.nextLine();
 	    break;
 
 	case 3:
+
+	    //Codigo ANSI que simula limpieza de pantalla
 	    System.out.print("\033[H\033[2J");
+
+	    //Como la opcion es salir, se sale del menu 
 	    System.out.println("Gracias por comprar en Los Chicos Que Lloran, buen dia");
+
+	    //Se usa System.exit(0) para saber si la ejecucion del programa fue buena
 	    System.exit(0);
 	    break;
 	    }
 
 	
 	
-	    }while(opcion != 3);//fin del do
+	    }while(opcion != 3);//fin del do-while
 	
 	
     }//fin del metodo main
