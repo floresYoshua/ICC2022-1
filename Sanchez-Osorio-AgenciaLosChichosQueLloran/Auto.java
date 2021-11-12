@@ -220,7 +220,7 @@ public class Auto{
     
 
 
-    //METODOS EPECIALES
+    //METODOS ESPECIALES
 
     /**
      * Metodo toString que regresa el objeto en forma de cadena 
