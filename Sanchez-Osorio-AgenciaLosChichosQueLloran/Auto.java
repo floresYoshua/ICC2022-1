@@ -78,7 +78,7 @@ public class Auto{
      * @param precio El nuevo precio del auto
      */
     public Auto(boolean electrico, String precio){
-	this.modelo = "Chevrolet Volt EUV";
+	this.modelo = "Chevrolet Bolt EUV";
 	this.color = "blanco";
 	this.noPuertas = "4";
 	this.año = "2020";
