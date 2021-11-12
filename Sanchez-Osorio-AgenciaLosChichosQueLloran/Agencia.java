@@ -51,6 +51,8 @@ public class Agencia{
 			}else if(opcion == 2){
 			    Auto autoAveo = new Auto("Blanco");
 			    System.out.println("Usted ha realizado la compra de:\n" + autoAveo);
+			}else{
+			    System.out.println("Ingresa una opcion valida");
 			}
 			System.out.println("---------------------------------------------");
 
@@ -84,6 +86,8 @@ public class Agencia{
 		    }else if(opcion == 2){
 			Auto autoBolt = new Auto(false, "620,000");
 			System.out.println("Usted ha realizado la compra de:\n" + autoBolt);
+		    }else{
+			System.out.println("Ingresa una opcion valida");
 		    }
 		    System.out.println("---------------------------------------------");
 
@@ -131,7 +135,9 @@ public class Agencia{
 		queja = sc.nextLine();
 		System.out.println("Su queja ha sido recibida, gracias");
 		
-		    }
+		    }else{
+		    System.out.println("Ingresa una opcion valida");}
+		    
 
 	    */
 
