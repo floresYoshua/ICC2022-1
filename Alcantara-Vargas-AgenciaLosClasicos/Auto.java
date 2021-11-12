@@ -35,6 +35,8 @@ public class Auto{
     public Auto(String marca, String modelo, int ano, double precio, String color){
 	this.marca = marca;
 	this.modelo = modelo;
+	//Para asegurar un año positivo
+	ano = Math.abs(ano);
 	this.ano = ano;
 	this.precio = precio;
 	this.color = color; 
@@ -131,6 +133,7 @@ public class Auto{
      * @param a El nuevo año de fabricación
      **/
     public void setAno(int a){
+	a = Math.abs(a);
 	this.ano = a;
     }
 
@@ -188,7 +191,7 @@ public class Auto{
     /**
      * Método equals. Sirve para ver si dos autos son iguales
      *
-     * @param a Auto contra el qie se va a comparar
+     * @param a Auto contra el que se va a comparar
      * @return un valor boolean dependiendo la respuesta
      **/
     public boolean equals(Auto a){
