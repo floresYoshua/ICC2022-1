@@ -98,6 +98,7 @@ public class Vendedor{
     public String presentarse(){
 	//Variable para guardar el nombre
 	String n = this.getNombre();
+	//Pasa el nombre a mayusculas
 	n = n.toUpperCase();
 	return "Buen dia, mi nombre es " + n  + "\n" + "¿En que puedo ayudarle?";
     }
@@ -118,5 +119,37 @@ public class Vendedor{
     }
 
     //Metodos especiales
-    
+    /**
+     * Metodo toString. 
+     *
+     * @return El nombre del vendedor y su humor
+     **/
+    public String toString(){
+	//Variable para guardar el nombre
+	String n = this.getNombre();
+	//Pasa el nombre a mayusculas
+	n = n.toUpperCase();
+	if(this.buenHumor == true){
+	    return "Mi nombre es " + n + " y estoy de buenas.";
+	}else{
+	    return "Mi nombre es " + n + " y no estoy de buenas.";
+	}
+    }
+
+    /**
+     * Metodo equals. Compara dos vendedores para saber si tienen el
+     * mismo nombre y humor
+     * 
+     * @param v El vendedor contra el que se va a comparar
+     * @return Un valor boolean dependiendo del nombre y humor
+     **/
+    public boolean equals(Vendedor v){
+	//Pasa el nombre de los dos vendedores a minusculas
+	String v1 = this.nombre;
+	String v2 = v.nombre;
+	v1 = v1.toLowerCase();
+	v2 = v2.toLowerCase();
+	//Regresa el boolean
+	return v1.equals(v2) && this.buenHumor == v.buenHumor;
+    }
 }
