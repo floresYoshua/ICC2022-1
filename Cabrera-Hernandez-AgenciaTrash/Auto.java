@@ -1,3 +1,58 @@
-public class Auto
-{
+/**
+* Clase que define los atributos y métodos de un Auto de la Agencia Trash.
+* @author : Dhamar Cabrera.
+* @author : Elizabeth Hernandez.
+* @version : 1.0
+*/
+
+public class Auto {
+  // Atributos del Auto.
+  private String marca; //cuál es su marca
+  private String modelo; //qué modelo es
+  private String tipo; //sedan, rurral, familiar, casa rodante, etc...
+  private String color; //cuál es su color
+  private int n_llantas; //cuántas llantas tiene
+  private int n_puertas; //cuántas puertas tiene
+  private double precio; //qué precio tiene
+
+
+  /**
+  * Constructor por omisión
+  * @return : marca
+  * @return : modelo
+  * @return : tipo
+  * @return :color
+  * @return : n_llantas
+  * @return : n_puertas
+  * @return : precio
+  */
+  public AutoTrash (){
+    this.marca = "Nissan";
+    this.modelo = "Versa";
+    this.tipo = "Sedan";
+    this.color = "Rojo";
+    this.n_llantas = 4;
+    this.n_puertas = 4;
+    this.precio = 276.900;
+  }
+
+  /**
+  * Constructor con parámetros
+  * @param : marca
+  * @param : modelo
+  * @param : tipo
+  * @param :color
+  * @param : n_llantas
+  * @param : n_puertas
+  * @param : precio
+  */
+  public AutoTrash ( Strring marca, String modelo, String tipo, String color, int n_llantas, int n_puertas, double precio){
+    this.marca = marca;
+    this.modelo = modelo;
+    this.tipo = tipo;
+    this.color = color;
+    this.n_llantas = n_llantas;
+    this.n_puertas = n_puertas;
+    this.precio = precio;
+  }
 }
