@@ -20,7 +20,7 @@ public class Auto {
      * @return : marca
      * @return : modelo
      * @return : tipo
-     * @return :color
+     * @return : color
      * @return : n_llantas
      * @return : n_puertas
      * @return : precio
@@ -41,7 +41,7 @@ public class Auto {
      * @param : marca
      * @param : modelo
      * @param : tipo
-     * @param :color
+     * @param : color
      * @param : n_llantas
      * @param : n_puertas
      * @param : precio
@@ -61,7 +61,7 @@ public class Auto {
      * @return : marca
      * @return : modelo
      * @return : tipo
-     * @return :color
+     * @return : color
      * @return : n_llantas
      * @return : n_puertas
      * @return : precio
@@ -91,4 +91,44 @@ public class Auto {
     public double getPrecio ( double precio){
 	return this.precio = precio;
     }
+
+    /**
+     * Modificación de las características del auto.
+     * @param : marca
+     * @param : modelo
+     * @param : tipo
+     * @param : color
+     * @param : n_llantas
+     * @param : n_puertas
+     * @param : precio
+     */
+    public void setMarca ( String marca ){
+	this.marca = marca;
+    }
+
+    public void setModelo ( String modelo ){
+	this.modelo = modelo;
+    }
+
+    public void setTipo ( String tipo ){
+	this.tipo = tipo;
+    }
+    public void setColor ( String color ){
+	this.color = color;
+    }
+    
+    public void setLlantas ( int n_llantas ){
+	this.n_llantas = n_llantas;
+    }
+
+    public void setPuertas ( int n_puertas ){
+	this.n_puertas = n_puertas;
+    }
+    public void setPrecio ( double precio){
+	this.precio = precio;
+    }
 }
+
+/**
+* Fin del programa.
+*/
