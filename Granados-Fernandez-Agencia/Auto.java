@@ -172,7 +172,7 @@ public class Auto {
      * @return La representación del auto en forma de cadena
      */
     public String toString() {
-        return "\nEl auto es " + tipoAuto + " de la marca " + marca + " modelo " + modelo + " color " + color
+        return "\nEl auto es " + tipoAuto + " de la marca \"" + marca + "\", modelo " + modelo + ", color " + color
                 + " y su precio es de $" + costo;
     }
 
