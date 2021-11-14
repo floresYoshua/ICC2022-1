@@ -133,6 +133,7 @@ public class Auto{
      * @param a El nuevo año de fabricación
      **/
     public void setAno(int a){
+	//Para asegurar a positivo
 	a = Math.abs(a);
 	this.ano = a;
     }
