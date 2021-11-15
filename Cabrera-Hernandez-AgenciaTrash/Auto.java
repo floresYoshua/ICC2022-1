@@ -1,4 +1,4 @@
-**
+/**
 * Clase que define los atributos y métodos de un Auto de la Agencia Trash.
 * @author : Dhamar Cabrera.
 * @author : Elizabeth Hernandez.
