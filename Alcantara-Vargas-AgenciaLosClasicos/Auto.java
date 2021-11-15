@@ -1,6 +1,7 @@
 //ENCABEZADO
 /**
  * Clase que representa a un automóvil
+ *
  * @author Isaac Alcantara y Eduardo Vargas
  * @version 1.0
  * */
