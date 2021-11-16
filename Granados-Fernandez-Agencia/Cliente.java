@@ -141,4 +141,12 @@ public class Cliente {
     public void setAuto(Auto auto) {
         this.auto = auto;
     }
+
+    /**
+     * Metodo toString permite saber las características del cliente
+     * @return Las características del cliente
+     */
+    public String toString(){
+        return "No. Cliente: " + noCliente + "\nNombre: " + nombre + " " + apellido1 + " " + apellido2 + "\nImporte a pagar: " + importe + "Forma de pago: " + formaPago;
+    }
 }

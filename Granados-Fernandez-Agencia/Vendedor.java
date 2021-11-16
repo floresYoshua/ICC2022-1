@@ -179,6 +179,12 @@ public class Vendedor {
         auto.setCosto(costoConDescuento);
     }
 
-
+    /**
+     * Metodo toString nos dice las características del vendedor
+     * @return Las caracteristicas del vendedor
+     */
+    public String toString(){
+        return "Vendedor: " + nombre + "\nNo. vendedor: "+ noVendedor;
+    }
 
 }
