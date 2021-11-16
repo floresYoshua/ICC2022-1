@@ -155,7 +155,7 @@ public class Comprador{
      *@return String
      */
     public String toString(){
-	return "Nombre: " + this.nombre + "\n Apellido: " + this.apellido + "\n Número de Cuenta: " + this.numCuenta + "\n Dinero en cuenta: " + this.dinero +  "Y se ve que usted está " + this.estadoAnimo; 
+	return "Nombre: " + this.nombre + "\n Apellido: " + this.apellido + "\n Número de Cuenta: " + this.numCuenta + "\n Dinero en cuenta: " + this.dinero +  "\n Esta " + this.estadoAnimo; 
     }
 
     /**
@@ -165,7 +165,7 @@ public class Comprador{
      *@param precio Precio del objeto a comprar 
      *@return String
      */
-    public String Comprar(double precio){
+    public String comprar(double precio){
 	//Se declara una variable para modificar el atributo "estadoAnimo" del objeto de la clase comprador
         String estadoaAnimo = "Feliz";
 	//Abrimos una condicional donde preguntamos si el parámetro precio es menor o igual que el dinero disponible en la cuenta bancaria del comprador
@@ -175,14 +175,14 @@ public class Comprador{
 	    //Se modifica el atributo "estadoAnimo" del comprador
             setEstadoAnimo(estadoAnimo);
 	    // Se duelve un String con un mensaje y el nuevo saldo en la cuenta bancaria
-	    return "Gracias por su compra, ahora el dinero en su cuenta es de " + this.dinero + "pesos"; 
+	    return "Gracias por su compra, ahora el dinero en su cuenta es de " + this.dinero + " pesos"; 
 	} else {
 	    //Si no se cumple, el valor de la variable estadoAnimo se modifica
 	    estadoAnimo = "Triste";
 	    //Se modifica el valor del atributo "estadoAnimo" del objeto de la clase comprador
 	    setEstadoAnimo(estadoAnimo);
 	    //Se devuelve un String con un mensaje y el valor del atributo "dinero" del objeto de la clase comprador
-	 	return "No cuenta con el dinero disponible para realizar esa compra, su saldo es de" + this.dinero + "pesos";  
+	 	return "No cuenta con el dinero disponible para realizar esa compra, su saldo es de " + this.dinero + " pesos";  
    
 	}
 
@@ -196,7 +196,7 @@ public class Comprador{
      *@param precio Precio del objeto a comprar 
      *@return String
      */
-    public String Rentar(int tiempo, double precio){
+    public String rentar(int tiempo, double precio){
 	//Se crea una variable String para modificar el atributo "estadoAnimo" del objeto de la clase comprador
         String estadoaAnimo = "Feliz";
 	//Se crea una variable tipo double para guardar el total del costo de la renta del auto
@@ -210,14 +210,14 @@ public class Comprador{
 	    //Se modifica el valor del atributo "estadoAnimo" del ejemplar de la clase comprador
             setEstadoAnimo(estadoAnimo);
 	    //Se devuelve un mensaje junto con el valor del atributo "dinero"
-	    return "Gracias por su compra, ahora el dinero en su cuenta es de " + this.dinero + "pesos"; 
+	    return "Gracias por su compra, ahora el dinero en su cuenta es de " + this.dinero + " pesos"; 
 	} else {
 	    //Se asigna un nuevo valor a la varibale estadoAnimo
 	    estadoAnimo = "Enojado";
 	    //Se modifica el valor del atributo "estadoAnimo" del ejmeplar de la clase comprador
 	    setEstadoAnimo(estadoAnimo);
 	    //Se devuelve un mensaje junto con el valor actual del atributo "dinero" del objeto de la clase comprador
-	 	return "No cuenta con el dinero disponible para realizar esa renta, pues su saldo es de" + this.dinero + "pesos" + "\n Puede intentar rentar otro auto o cambiar el tiempo de renta";  
+	 	return "No cuenta con el dinero disponible para realizar esa renta, pues su saldo es de" + this.dinero + " pesos" + "\n Puede intentar rentar otro auto o cambiar el tiempo de renta";  
    
 	}
 
@@ -230,7 +230,7 @@ public class Comprador{
      *@version 1.0
      *@return String
      */
-    public String Feliz(){
+    public String feliz(){
 
 	return "Muchas gracias, que tenga excelente día";
 
@@ -241,7 +241,7 @@ public class Comprador{
      *@version 1.0
      *@return String
      */
-     public String Triste(){
+     public String triste(){
 
 	return "Rayos, supongo que aún no podré comprar ese auto, bueno, gracias";
 
@@ -252,7 +252,7 @@ public class Comprador{
      *@version 1.0
      *@return String
      */
-     public String Enojado(){
+     public String enojado(){
 
 	return "Pero qué tontería, esto debe ser un error, no vuelvo a este lugar";
 
