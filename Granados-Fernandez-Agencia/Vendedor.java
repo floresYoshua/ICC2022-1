@@ -54,6 +54,14 @@ public class Vendedor {
     }
 
     /**
+     * Metodo getTrabajador nos dice si el vendedor es trabajador o no
+     * @return si el vendedor es trabajador
+     */
+    public boolean getTrabajador(){
+        return trabajador;
+    }
+
+    /**
      * Método setBuenHumor método que permite cambiar el humor del vendedor
      * 
      * @param buenHumor
@@ -69,6 +77,14 @@ public class Vendedor {
      */
     public void setNoVendedor(int noVendedor) {
         this.noVendedor = noVendedor;
+    }
+
+    /**
+     * Metodo setTrabajador permite hacer que el vendedor sea trabajador o no
+     * @param trabajador True si lo es y false si no lo es
+     */
+    public void setTrabajador(boolean trabajador){
+        this.trabajador=trabajador;
     }
 
     /**
