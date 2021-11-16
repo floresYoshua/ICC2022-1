@@ -1,5 +1,16 @@
+/**Agencia donde se ve la distribucion de nuestra agencia
+ * @author Brenda Paola Resendiz Mendoza
+ * @author Dulce Julieta Mora Hernandez
+ * @version 1.0
+ **/
+
 import java.util.Scanner;
 public class Menu{
+    
+    /**Metodo principal donde vemos la distribucion de nuestra agencia
+    *@param args Argumentos
+    **/
+    
     public static void main(String[] args){
 	
       	Scanner sc = new Scanner(System.in);	
