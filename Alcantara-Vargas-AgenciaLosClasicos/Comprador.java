@@ -214,7 +214,7 @@ public class Comprador{
 	} else {
 	    //Se asigna un nuevo valor a la varibale estadoAnimo
 	    estadoAnimo = "Enojado";
-	    //Se modifica el valor del atributo "estadoAnimo" del ejmeplar de la clase comprador
+	    //Se modifica el valor del atributo "estadoAnimo" del ejemplar de la clase comprador
 	    setEstadoAnimo(estadoAnimo);
 	    //Se devuelve un mensaje junto con el valor actual del atributo "dinero" del objeto de la clase comprador
 	 	return "No cuenta con el dinero disponible para realizar esa renta, pues su saldo es de" + this.dinero + " pesos" + "\n Puede intentar rentar otro auto o cambiar el tiempo de renta";  

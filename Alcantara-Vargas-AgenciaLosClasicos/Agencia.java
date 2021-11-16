@@ -479,27 +479,25 @@ public class Agencia{
 		 double precio;
 		 int dias;
 		 dias=5;
-		if (respRenta==1){
+		if(respRenta==1){
 		     precio = KiaRent2018.getPrecio();
-		     cliente.Rentar(dias, precio);
+		     cliente.rentar(dias, precio);
 
 		}else if (respRenta==2){
 		    precio = KiaRent2014.getPrecio();
-		    cliente.Rentar(dias, precio);
+		    cliente.rentar(dias, precio);
 		} else{
 		    System.out.println("Lo siento, sólo contamos con esos modelos y usted seleccionó un modelo con el que no contamos actualmente");
 		}
 		System.out.println("Espero haber sido de ayuda, hasta luego");
 		break;
-<<<<<<< HEAD
-	    }
+		//}
                
 	    }	
-=======
 	    default:
 		System.out.println("Esa no es una opción");
 	    }
->>>>>>> 09c678b1692ba78536cd00c4a6fc79e4f9a99553
+
 	}else if(respuesta == 2){
 	    System.out.println("Estamos para servirle.");
 	}else{
