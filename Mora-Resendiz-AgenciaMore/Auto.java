@@ -38,7 +38,7 @@ public class Auto{
      * @param matricula Representa su matricula
      **/
     
-    public Auto(String color, String marca, int fabricacion, int pasajeros, String tipodeauto, int puertas, int modelo, int precio, int matricula, String descuento)
+    public Auto(String color, String marca, int fabricacion, int pasajeros, String tipodeauto, String tipodeenergia, int puertas, int modelo, int precio, int matricula, String descuento)
     {
 	this.color = color;
 	this.marca = marca;
