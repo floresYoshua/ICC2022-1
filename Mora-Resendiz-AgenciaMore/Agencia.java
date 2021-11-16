@@ -44,6 +44,25 @@ public class Menu{
 
 	    case 6:
 		    System.out.println("Selecciono la opcion 6. CLIENTES");
+		    System.out.println("HISTORIAL DE CLIENTES");
+	//Cliente 1 ocupando constructor 1 de la clase Comprador
+	Comprador cliente1 = new Comprador("Mildred Calvillo", 38523564, 2021, "noviembre del 2005", "efectivo", 1);
+	System.out.println("Nombre: " + cliente1.getNombre());
+	System.out.println("Clave del auto que adquirio: " + cliente1.getAutoCompra());
+	System.out.println("Año actual: " + cliente1.getAñoCompra());
+	System.out.println("Fecha de la ultima compra: " + cliente1.getUltCompra());
+	System.out.println("Tipo de pago: " + cliente1.getTipoPago());
+	System.out.println("Numero de autos que ha adquirido: " + cliente1.getHistorial());
+
+	//Cliente 2 ocupando constructor 1 de la clase Comprador	
+	Comprador cliente2 = new Comprador("Alexia Ramirez", 12345678, 2021, "enero del 2008", "tarjeta de debito", 2);
+	System.out.println("\nNombre: " + cliente2.getNombre());
+	System.out.println("Clave del auto que adquirio: " + cliente2.getAutoCompra());
+	System.out.println("Año actual: " + cliente1.getAñoCompra());
+	System.out.println("Fecha de la ultima compra: " + cliente2.getUltCompra());
+	System.out.println("Tipo de pago: " + cliente2.getTipoPago());
+	System.out.println("Numero de autos que ha adquirido: " + cliente2.getHistorial());
+
 		    break;
 
 	    case 7:
