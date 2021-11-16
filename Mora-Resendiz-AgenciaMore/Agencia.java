@@ -26,8 +26,59 @@ public class Menu{
 		   
 	    case 2:
 		    System.out.println("Selecciono la opcion 2. AUTOS DISPONIBLES");
-		    //int opcion1;
-		    // switch(opcion1){}
+
+		    Auto auto1 = new Auto("Azul", "Chevrolet", 2017, 6, "estandar", "hibrido", 4, 14735379, 204900, 2456, "7%")
+		    System.out.println("Color: " + auto1.getColor());
+		    System.out.println("Marca: " + auto1.getMarca());
+		    System.out.println("Año de fabricación : " + auto1.getFabricacion());
+		    System.out.println("Numero de pasajeros: " + auto1.getPasajeros());
+		    System.out.println("Tipo de auto: " + auto1.getTipodeauto());
+		    System.out.println("Tipo de energia: " + auto1.getTipodeenergia());
+		    System.out.println("Numero de puertas: " + auto1.getPuertas());
+		    System.out.println("Modelo: " + auto1.getModelo());
+		    System.out.println("Precio: " + auto1.getPrecio());
+		    System.out.println("Matricula: " + auto1.getMatricula());
+		    System.out.println("Descuentos: " + auto1.getDescuento());
+
+		    Auto auto2 = new Auto("Negro", "Renault", 2020, 4, "automatico", "hibrido", 2, 67536487, 194900, 5490, "No aplica")
+		    System.out.println("Color: " + auto2.getColor());
+		    System.out.println("Marca: " + auto2.getMarca());
+		    System.out.println("Año de fabricación : " + auto2.getFabricacion());
+		    System.out.println("Numero de pasajeros: " + auto2.getPasajeros());
+		    System.out.println("Tipo de auto: " + auto2.getTipodeauto());
+		    System.out.println("Tipo de energia: " + auto2.getTipodeenergia());
+		    System.out.println("Numero de puertas: " + auto2.getPuertas());
+		    System.out.println("Modelo: " + auto2.getModelo());
+		    System.out.println("Precio: " + auto2.getPrecio());
+		    System.out.println("Matricula: " + auto2.getMatricula());
+		    System.out.println("Descuentos: " + auto2.getDescuento());
+
+		    Auto auto3 = new Auto("Azul", "Honda", 2019, 5, "estandar", "electrico", 4, 78537954, 170000, 8976, "15%")
+		    System.out.println("Color: " + auto3.getColor());
+		    System.out.println("Marca: " + auto3.getMarca());
+		    System.out.println("Año de fabricación : " + auto3.getFabricacion());
+		    System.out.println("Numero de pasajeros: " + auto3.getPasajeros());
+		    System.out.println("Tipo de auto: " + auto3.getTipodeauto());
+		    System.out.println("Tipo de energia: " + auto3.getTipodeenergia());
+		    System.out.println("Numero de puertas: " + auto3.getPuertas());
+		    System.out.println("Modelo: " + auto3.getModelo());
+		    System.out.println("Precio: " + auto3.getPrecio());
+		    System.out.println("Matricula: " + auto3.getMatricula());
+		    System.out.println("Descuentos: " + auto3.getDescuento());
+
+		    Auto auto4 = new Auto("Plateado", "Hyundai", 2020, 6, "estandar", "electrico", 4, 63892908, 303000, 8965, "10%")
+		    System.out.println("Color: " + auto1.getColor());
+		    System.out.println("Marca: " + auto1.getMarca());
+		    System.out.println("Año de fabricación : " + auto1.getFabricacion());
+		    System.out.println("Numero de pasajeros: " + auto1.getPasajeros());
+		    System.out.println("Tipo de auto: " + auto1.getTipodeauto());
+		    System.out.println("Tipo de energia: " + auto1.getTipodeenergia());
+		    System.out.println("Numero de puertas: " + auto1.getPuertas());
+		    System.out.println("Modelo: " + auto1.getModelo());
+		    System.out.println("Precio: " + auto1.getPrecio());
+		    System.out.println("Matricula: " + auto1.getMatricula());
+		    System.out.println("Descuentos: " + auto1.getDescuento());
+			
 		    break;
 
       	    case 3:
@@ -85,6 +136,10 @@ public class Menu{
 		    //Para que solo este en el rango
 	    default:
 		System.out.println("Las opciones disponibles son del 1 al 6");
-	    }       
+	    }
+	    
+
+	    
     }
+    
 }
