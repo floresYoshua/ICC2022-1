@@ -26,8 +26,8 @@ public class Menu{
 		   
 	    case 2:
 		    System.out.println("Selecciono la opcion 2");
-		    //		    int opcion1;
-		    //switch(opcion1){}
+		    //int opcion1;
+		    // switch(opcion1){}
 		    break;
 
       	    case 3:
