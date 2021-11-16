@@ -58,3 +58,99 @@ public class Comprador {
     this.tipopago = tipopago;
     this.historial = historial;
     }
+
+    /**
+     *Metodo que devuelve el nombre
+     *@return El nombre
+     **/
+    public String getNombre(){
+    return this.nombre;
+    }
+    /**
+    *Metodo que modifica el nombre
+    *@param nombre String
+    **/
+    public void setNombre(String nombre){
+    this.nombre = nombre;
+    }
+
+
+    /**
+     *Metodo que devuelve el auto que se esta comprando
+     *@return El auto que se esta comprando
+     **/
+    public int getAutoCompra(){
+    return this.autocompra;
+    }
+    /**
+    *Metodo que modifica el auto que se esta comprando
+    *@param autocompra int
+    **/
+    public void setAutoCompra(int autocompra){
+    this.autocompra = autocompra;
+    }
+
+    
+     /**
+     *Metodo que devuelve el año en el que se hace la compra
+     *@return El año actual
+     **/
+    public int getAñoCompra(){
+    return this.añocompra;
+    }
+    /**
+    *Metodo que modifica el año en el que se hace la compra
+    *@param añocompra int
+    **/
+    public void setAñoCompra(int AñoCompra){
+    this.añocompra = añocompra;
+    }
+
+    
+     /**
+     *Metodo que devuelve la fecha de la ultima compra
+     *@return La fecha de la ultima compra
+     **/
+    public String getUltCompra(){
+    return this.ultcompra;
+    }
+    /**
+    *Metodo que modifica la fecha de la ultima compra
+    *@param ultcompra String
+    **/
+    public void setUltCompra(String ultcompra){
+    this.ultcompra = ultcompra;
+    }
+
+     /**
+     *Metodo que devuelve el tipo de pago
+     *@return El tipo de pago
+     **/
+    public String getTipoPago(){
+    return this.tipopago;
+    }
+    /**
+    *Metodo que modifica el tipo de pago
+    *@param tipopago String
+    **/
+    public void setTipoPago(String tipopago){
+    this.tipopago = tipopago;
+    }
+
+    
+     /**
+     *Metodo que devuelve el numero de autos comprados
+     *@return El "historial"
+     **/
+    public int getHistorial(){
+    return this.historial;
+    }
+    /**
+    *Metodo que modifica el historial
+    *@param historial int
+    **/
+    public void setHistorial(int historial){
+    this.historial = historial;
+    }
+    
+}
