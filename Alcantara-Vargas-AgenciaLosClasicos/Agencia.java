@@ -54,11 +54,55 @@ public class Agencia{
 	    
 	    switch(respuesta){
 	    case 1:     //En caso de querer comprar;
-		System.out.println("De acuerdo " + cliente.getNombre() + " " + cliente.getApellido() + "\nEn esta agencia solamente manejamos 5 marcas de autos para comprar: \n 1. Nissan \n 2. Kia \n 3. Chevrolet \n 4. Toyota \n 5. Volkswagen");
+		//Mostrar al cliente las opciones de marcas para compra
+		System.out.println("\nDe acuerdo " + cliente.getNombre() + " " + cliente.getApellido() + "\nEn esta agencia solamente manejamos 5 marcas de autos para comprar: \n 1. Nissan \n 2. Kia \n 3. Chevrolet \n 4. Toyota \n 5. Volkswagen \nIngrese el numero de la marca deseada:");
+		
+		//Guarda la opcion en la variable respuesta
+		respuesta = numeros.nextInt();
+		respuesta = Math.abs(respuesta);
+		
+		//Solicitar ahora el numero de cuenta y el dinero disponible en ella
+		System.out.println("Para poder continuar con el trámite necesito saber su numero de cuenta bancaria (De cuatro digitos): ");
+		int cuentaC = numeros.nextInt();
+		cliente.setNumCuenta(cuentaC); //Establece el numero de cuenta
+		
+		//Solicita el dinero disponible en la cuenta
+		System.out.println("Ahora necesito saber cuanto dinero tiene: ");
+		double dineroC = numeros.nextInt();
+		cliente.setDinero(dineroC); //Establece el dinero disponible
+		
+		//Se abren los casos dependiendo de la marca seleccionada por el usuario
+		String marca; //Variable para la marca del auto
+		switch(respuesta){
+		case 1:
+		    marca = "Nissan";
+		    System.out.println("De la marca Nissan contamos con los siguientes modelos: ");
+		    break;
+		case 2:
+		    marca = "Kia";
+		    System.out.println("De la marca Kia contamos con los siguientes modelos: ");
+		    break;
+		case 3:
+		    marca = "Chevrolet";
+		    System.out.println("De la marca Chevrolet contamos con los siguientes modelos: ");
+		    break;
+		case 4:
+		    marca = "Toyota";
+		    System.out.println("De la marca Toyota contamos con los siguientes modelos: ");
+		    break;
+		case 5:
+		    marca = "Volkswagen";
+		    System.out.println("De la marca Volkswagen contamos con los siguientes modelos: ");
+		    break;
+		default:
+		    System.out.println("Esa no es una opcion");
+		}
 		break;
 	    case 2:     //En caso de querer rentar
 		System.out.println("De acuerdo " + cliente.getNombre() + " "  + cliente.getApellido() + "\nEn esta agencia solamente manejamos 3 marcas de autos para rentar: \n 1. Kia \n 2. Toyota \n 3. Chevrolet");
 		break;
+	    default:
+		System.out.println("Esa no es una opción");
 	    }	
 	}else if(respuesta == 2){
 	    System.out.println("Estamos para servirle.");
