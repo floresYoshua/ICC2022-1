@@ -16,7 +16,7 @@ public class Agencia{
 	//Imprimir el nombre de la agencia y si podemos ayudar en algo
 	System.out.println("***AGENCIA LOS CLASICOS***" + "\n"+ "Bienvenido, ¿podemos ayudarle en algo? (ingresar el numero) \n 1. Deseo hablar con un vendedor \n 2. Solamente estoy viendo");
 
-
+	//Se crean objetos de la clase auto para ser rentados
 	Auto ToyotaPrius = new Auto();
 	Auto KiaRent2018 = new Auto("Kia", "Forte Sedán", 2018, 4560.50, "Rojo");
 	Auto KiaRent2014 = new Auto("Kia", "Rio Sedán", 2014, 3600.80, "Azul");
@@ -462,43 +462,204 @@ public class Agencia{
 		System.out.println("De acuerdo " + cliente.getNombre() + " "  + cliente.getApellido() + "\nEn esta agencia solamente manejamos 3 marcas de autos para rentar: \n 1. Kia \n 2. Toyota \n 3. Chevrolet");
 		//Se solicita al usuario que elija la marca del coche que desea rentar
 		System.out.println("\n Elija la marca de coche que desea rentar seleccionando el número asociado a este");
+			//Se crea una variable para el precio de la renta por día del auto
+		double precio;
 		//Para la respuesta del usuario
 		int respRenta = rentanum.nextInt();
 		respRenta = Math.abs(respRenta); //Tomemos el valor absoluto
 		switch(respRenta){
-
+		    //Se muestran los autos existentes de la marca Kia
 		case 1: System.out.println("\n Actualmente contamos sólo con dos ejemplares disponibles de esta marca para rentar");
-		    
+		    //Auto uno de Kia
 		    System.out.println("1.Primer ejemplar \n" + KiaRent2018.toString() + " (Por día de renta) \n");
-
+		    //Auto 2 de Kia
 		     System.out.println("2.Segundo ejemplar \n" + KiaRent2014.toString() + " (Por día de renta)");
+		     //Se solicita al usuario que elija el auto a rentar
 		     System.out.println("Elija el ejemplar que desea rentar escribiendo el número asociado a este");
 	//Para la respuesta del usuario
 		int autoRenta = rentanum.nextInt();
 		autoRenta = Math.abs(autoRenta); //Tomemos el valor absoluto
-		 double precio;
-		 int dias;
-		 dias=5;
-		if(respRenta==1){
-		     precio = KiaRent2018.getPrecio();
-		     cliente.rentar(dias, precio);
+	
+		 System.out.println("Ingrese el número de días que desee rentar el automóvil");
+		 //Se crea una variable para alamacenar la cantidad de días que el usuario rentará el auto
+		 int dias= numeros.nextInt();
+		 //Se abre una condicional donde se pregunta si el número de días a rentar es igual a 0
+		 if(dias<=0){
+		     //De cumplirse se coloca un mensaje en pantalla y salimos del switch
+		     System.out.println("No se haga el chistoso, fuera de aquí");
+		     break;
 
-		}else if (respRenta==2){
+		 }
+		 //Se solicita al usuario que dé su número de tarjeta
+		 	System.out.println("Para poder continuar con el trámite necesito saber su numero de cuenta bancaria (De cuatro digitos): ");
+			//Se asigna el valor dado por el usuario a la variable cuentaC
+		cuentaC = numeros.nextInt();
+		cliente.setNumCuenta(cuentaC); //Establece el numero de cuenta
+		
+		//Solicita el dinero disponible en la cuenta
+		System.out.println("Ahora necesito saber cuanto dinero tiene: ");
+		dineroC = numeros.nextInt();
+		dineroC = Math.abs(dineroC); //Valor absoluto
+		cliente.setDinero(dineroC); //Establece el dinero disponible
+		//Se abre condicional donde los casos corresponden al ejemplar de auto a rentar elegido por el usuario
+		if(autoRenta == 1){
+		    //El precio será el valor del atributo "precio" del objeto de la clase auto
+		     precio = KiaRent2018.getPrecio();
+		     //Se llama al método rentar de la clase comprador y se imrpime en pantalla
+		     System.out.println(cliente.rentar(dias, precio));
+		}else if(autoRenta==2){
+		     //El precio será el valor del atributo "precio" del objeto de la clase auto
 		    precio = KiaRent2014.getPrecio();
-		    cliente.rentar(dias, precio);
-		} else{
+		      //Se llama al método rentar de la clase comporador y se imrpime en pantalla
+		    System.out.println(cliente.rentar(dias,precio));
+		}else{
+		    //Si el usuario elige un modelo que no está disponible sale un mensaje en pantalla expresando esto
 		    System.out.println("Lo siento, sólo contamos con esos modelos y usted seleccionó un modelo con el que no contamos actualmente");
 		}
+		//El vendedor se despide
 		System.out.println("Espero haber sido de ayuda, hasta luego");
+		//Se abre una condicional donde el usuario se despide según su estado de ánimo
+		 if(cliente.getEstadoAnimo()=="Feliz"){
+             System.out.println(cliente.feliz());
+
+
+	    }else{
+		 System.out.println(cliente.enojado());
+
+	    }
 		break;
+		//Caso donde se elige la marca TOYOTA
+		case 2: System.out.println("\n Actualmente contamos sólo conun  ejemplar disponible de esta marca para rentar");
+		    //Se modifica el precio del auto para que sea asequible en su renta
+		    ToyotaPrius.setPrecio(4899.75);
+		    //Auto único de Toyota
+		    System.out.println("Ejemplar \n" + ToyotaPrius.toString() + " (Por día de renta) \n");
+		  autoRenta = 1;
+		    //Se solicita al usuario que indique cuántos días desea rentar el auto
+		 System.out.println("Ingrese el número de días que desee rentar el automóvil");
+		 //Se crea una variable para alamacenar la cantidad de días que el usuario rentará el auto
+		 dias= numeros.nextInt();
+		 //Se abre una condicional donde se pregunta si el número de días a rentar es igual a 0
+		 if(dias<=0){
+		     //De cumplirse se coloca un mensaje en pantalla y salimos del switch
+		     System.out.println("No se haga el chistoso, fuera de aquí");
+		     break;
+
+		 }
+		 //Se solicita al usuario que dé su número de tarjeta
+		 	System.out.println("Para poder continuar con el trámite necesito saber su numero de cuenta bancaria (De cuatro digitos): ");
+			//Se asigna el valor dado por el usuario a la variable cuentaC
+		cuentaC = numeros.nextInt();
+		cliente.setNumCuenta(cuentaC); //Establece el numero de cuenta
+		
+		//Solicita el dinero disponible en la cuenta
+		System.out.println("Ahora necesito saber cuanto dinero tiene: ");
+		dineroC = numeros.nextInt();
+		dineroC = Math.abs(dineroC); //Valor absoluto
+		cliente.setDinero(dineroC); //Establece el dinero disponible
+		//Se abre condicional donde los casos corresponden al ejemplar de auto a rentar elegido por el usuario
+		if(autoRenta == 1){
+		    //El precio será el valor del atributo "precio" del objeto de la clase auto
+		     precio = ToyotaPrius.getPrecio();
+		     //Se llama al método rentar de la clase comprador y se imrpime en pantalla
+		     System.out.println(cliente.rentar(dias, precio));
+		
+		}else{
+		    //Si el usuario elige un modelo que no está disponible sale un mensaje en pantalla expresando esto
+		    System.out.println("Lo siento, sólo contamos con esos modelos y usted seleccionó un modelo con el que no contamos actualmente");
+		}
+			//El vendedor se despide
+		System.out.println("Espero haber sido de ayuda, hasta luego");
+		//Se abre una condicional donde el usuario se despide según su estado de ánimo
+		 if(cliente.getEstadoAnimo()=="Feliz"){
+             System.out.println(cliente.feliz());
+
+
+	    }else{
+		 System.out.println(cliente.enojado());
+
+	    }
+		 break;
+		 //Caso donde elige la marca Chevrolet
+		case 3:  System.out.println("\n Actualmente contamos sólo con tres ejemplares disponibles de esta marca para rentar");
+		    //Auto uno de Chevrolet
+		    System.out.println("1.Primer ejemplar \n" + ChevroletRent2021.toString() + " (Por día de renta) \n");
+		    //Auto 2 de Chevrolet
+		     System.out.println("2.Segundo ejemplar \n" + ChevroletRent2010.toString() + " (Por día de renta)");
+		     		    //Auto 3 de Chevrolet
+		     System.out.println("\n3.Tercer ejemplar \n" + ChevroletRent1990.toString() + " (Por día de renta)");
+
+		     //Se solicita al usuario que elija el auto a rentar
+		     System.out.println("\nElija el ejemplar que desea rentar escribiendo el número asociado a este");
+	//Para la respuesta del usuario
+		 autoRenta = rentanum.nextInt();
+		autoRenta = Math.abs(autoRenta); //Tomemos el valor absoluto
+	
+		 System.out.println("Ingrese el número de días que desee rentar el automóvil");
+		 //Se crea una variable para alamacenar la cantidad de días que el usuario rentará el auto
+		  dias= numeros.nextInt();
+		 //Se abre una condicional donde se pregunta si el número de días a rentar es igual a 0
+		 if(dias<=0){
+		     //De cumplirse se coloca un mensaje en pantalla y salimos del switch
+		     System.out.println("No se haga el chistoso, fuera de aquí");
+		     break;
+
+		 }
+		 //Se solicita al usuario que dé su número de tarjeta
+		 	System.out.println("Para poder continuar con el trámite necesito saber su numero de cuenta bancaria (De cuatro digitos): ");
+			//Se asigna el valor dado por el usuario a la variable cuentaC
+		cuentaC = numeros.nextInt();
+		cliente.setNumCuenta(cuentaC); //Establece el numero de cuenta
+		
+		//Solicita el dinero disponible en la cuenta
+		System.out.println("Ahora necesito saber cuanto dinero tiene: ");
+		dineroC = numeros.nextInt();
+		dineroC = Math.abs(dineroC); //Valor absoluto
+		cliente.setDinero(dineroC); //Establece el dinero disponible
+		//Se abre condicional donde los casos corresponden al ejemplar de auto a rentar elegido por el usuario
+		if(autoRenta == 1){
+		    //El precio será el valor del atributo "precio" del objeto de la clase auto
+		     precio = ChevroletRent2021.getPrecio();
+		     //Se llama al método rentar de la clase comprador y se imrpime en pantalla
+		     System.out.println(cliente.rentar(dias, precio));
+		}else if(autoRenta==2){
+		     //El precio será el valor del atributo "precio" del objeto de la clase auto
+		    precio = ChevroletRent2010.getPrecio();
+		      //Se llama al método rentar de la clase comporador y se imrpime en pantalla
+		    System.out.println(cliente.rentar(dias,precio));
+		    }else if(autoRenta==3){
+		     //El precio será el valor del atributo "precio" del objeto de la clase auto
+		    precio = ChevroletRent1990.getPrecio();
+		    
+		      //Se llama al método rentar de la clase comporador y se imrpime en pantalla
+		    System.out.println(cliente.rentar(dias,precio));
+		}else{
+		    //Si el usuario elige un modelo que no está disponible sale un mensaje en pantalla expresando esto
+		    System.out.println("Lo siento, sólo contamos con esos modelos y usted seleccionó un modelo con el que no contamos actualmente");
+		}
+		//El vendedor se despide
+		System.out.println("Espero haber sido de ayuda, hasta luego");
+		//Se abre una condicional donde el usuario se despide según su estado de ánimo
+		 if(cliente.getEstadoAnimo()=="Feliz"){
+             System.out.println(cliente.feliz());
+
+
+	    }else{
+		 System.out.println(cliente.enojado());
+
+	    }
+		    
+		    break;
+ default:
+			System.out.println("Esa no es una opción");
+		
 		//}
                
 	    }	
-	    default:
-		System.out.println("Esa no es una opción");
+		// default:
+		//	System.out.println("Esa no es una opción");
 	    }
-
-	}else if(respuesta == 2){
+	   
 	    System.out.println("Estamos para servirle.");
 	}else{
 	    System.out.println("Escriba 1 o 2");
