@@ -25,21 +25,21 @@ public class Menu{
 		    break;    
 		   
 	    case 2:
-		    System.out.println("Selecciono la opcion 2");
+		    System.out.println("Selecciono la opcion 2. AUTOS DISPONIBLES");
 		    //int opcion1;
 		    // switch(opcion1){}
 		    break;
 
       	    case 3:
-		    System.out.println("Selecciono la opcion 3");
+		    System.out.println("Selecciono la opcion 3. SEMINUEVOS");
 		    break;
 
 	    case 4:
-		    System.out.println("Selecciono la opcion 4");
+		    System.out.println("Selecciono la opcion 4. PROMOCIONES");
 		    break;
 
 	    case 5:
-		    System.out.println("Selecciono la opcion 5");
+		    System.out.println("Selecciono la opcion 5. VENDEDORES");
 		    break;
 
 	    case 6:
